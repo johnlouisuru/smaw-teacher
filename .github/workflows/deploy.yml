@@ -41,13 +41,14 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /smaw/  # Change this to your target directory - Test
+          server-dir: /smaw/teacher/  # Change this to your target directory - Test 
           exclude: |
             **/.git*
             **/.git*/**
             **/node_modules/**
             **/.env
             **/vendor/**
+            **/db-config/**
             **/.vscode/**
             **/.idea/**
             **/tests/**
