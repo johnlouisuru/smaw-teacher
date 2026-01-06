@@ -1,5 +1,6 @@
 <?php
 require_once "db-config/security.php";
+//Test if This changes can be seen in the cPanel thru Github Actions server-dir: /smaw/teacher
 
 // If already logged in and profile complete, redirect to dashboard
 if (isLoggedIn() && isProfileComplete()) {
