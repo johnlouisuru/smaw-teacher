@@ -41,7 +41,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /public_html/smaw/teacher  # Change this to your target directory - Exact
+          server-dir: /public_html/smaw/  # Change this to your target directory - Test
           exclude: |
             **/.git*
             **/.git*/**
