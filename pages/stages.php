@@ -93,9 +93,13 @@ $quizzes = $stmt->fetchAll(PDO::FETCH_ASSOC);
       </tr>
     </thead>
     <tbody>
-      <?php foreach ($levels as $l): ?>
+      <?php 
+      $loop = 1;
+      foreach ($levels as $l): 
+        
+      ?>
         <tr>
-          <td><?= $l['id'] ?></td>
+          <td><?= $loop ?></td>
           <td><?= htmlspecialchars($l['level_number']) ?></td>
           <td><?= htmlspecialchars($l['level_name']) ?></td>
           <td><?= htmlspecialchars($l['stage_name']) ?></td>
@@ -114,7 +118,8 @@ $quizzes = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </button>
           </td>
         </tr>
-      <?php endforeach; ?>
+      <?php $loop++; 
+      endforeach; ?>
     </tbody>
   </table>
 </div>

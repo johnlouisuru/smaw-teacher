@@ -80,9 +80,13 @@
       </tr>
     </thead>
     <tbody>
-      <?php foreach ($sections as $sec): ?>
+      <?php 
+      $loop = 1;
+      foreach ($sections as $sec): 
+      
+      ?>
         <tr>
-          <td><?php echo $sec['id']?></td>
+          <td><?php echo $loop ?></td>
           <td><?php echo htmlspecialchars($sec['section_name'])?></td>
           <td><?php echo $sec['teacher_name'] ?: 'N/A'?></td>
           <td>
@@ -97,7 +101,8 @@
             </button>
           </td>
         </tr>
-      <?php endforeach; ?>
+      <?php $loop++; 
+      endforeach; ?>
     </tbody>
   </table>
 </div>

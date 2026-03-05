@@ -89,9 +89,14 @@
                         <th>Profile Picture</th> <th>Created At</th> 
                     </tr> </thead> 
                     <tbody>
-            <?php foreach ($students as $st): ?> 
+            <?php 
+            $loop = 1;
+            foreach ($students as $st): 
+                
+            
+            ?> 
                 <tr> 
-                    <td><?php echo $st['id'] ?></td> 
+                    <td><?php echo $loop ?></td> 
                     <td><?php echo htmlspecialchars($st['email']) ?></td> 
                     <td><?php echo htmlspecialchars($st['lastname']) ?></td> 
                     <td><?php echo htmlspecialchars($st['firstname']) ?></td> 
@@ -122,7 +127,9 @@
                     <td>
                         <?php echo htmlspecialchars($st['created_at']) ?>
                     </td> 
-                </tr><?php endforeach; ?> 
+                </tr><?php
+                $loop++;
+                 endforeach; ?> 
             </tbody> 
         </table> 
     </div> <!-- Profile Picture Modal --> 
